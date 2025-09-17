@@ -1,0 +1,275 @@
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+img {
+  overflow: hidden;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  margin: 0;
+}
+/* Загальні стилі для сторінки */
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0px;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(243, 229, 215, 1);
+  color: rgba(95, 86, 77, 1);
+}
+
+/* Контейнер */
+.container {
+  width: 375px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 536px;
+    height: 1764px;
+    border-radius: 12px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 656px;
+    height: 1620px;
+    border-radius: 24px;
+  }
+}
+/* Картинка */
+.image-omelette {
+  width: 311px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .image-omelette {
+    border-radius: 12px;
+    width: 536px;
+  }
+}
+@media (min-width: 1440px) {
+  .image-omelette {
+    border-radius: 12px;
+    width: 656px;
+  }
+}
+/* Основна частина рецепта */
+.whole-recipe {
+  width: 311px;
+  height: 1792px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .whole-recipe {
+    width: 536px;
+  }
+}
+@media (min-width: 1440px) {
+  .whole-recipe {
+    width: 656px;
+  }
+}
+.recipe-name {
+  color: rgba(49, 46, 44, 1);
+  font-size: 36px;
+  font-family: "Young Serif", sans-serif;
+  font-weight: 400;
+  line-height: 100%;
+  margin-bottom: 24px;
+}
+@media (min-width: 1440px) {
+  .recipe-name {
+    height: 40px;
+  }
+}
+.discription {
+  margin-bottom: 32px;
+}
+
+/* Секція часу */
+.time {
+  background-color: rgba(255, 247, 251, 1);
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+}
+
+.head-time {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  height: 20px;
+}
+
+.list-time {
+  margin-left: 8px;
+  list-style-type: disc;
+  list-style-position: inside;
+  list-style: none; /* прибираємо стандартні маркери */
+  padding-left: 0;
+}
+
+.list-item {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 32px; /* відступ для маркера */
+}
+.list-item:last-child {
+  margin-bottom: 0;
+}
+.list-item::before {
+  content: "•"; /* можна замінити на SVG чи інший символ */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* вирівнювання по вертикалі */
+  font-size: 18px;
+  color: black;
+}
+.span-time {
+  font-weight: 700;
+}
+
+/* Інгредієнти */
+.head {
+  font-size: 28px;
+  font-weight: 400;
+  font-family: "Young Serif", serif;
+  margin-bottom: 24px;
+  line-height: 100%;
+  color: rgba(133, 70, 50, 1);
+}
+.ingredients {
+  margin-bottom: 64px;
+}
+
+.ing-list {
+  padding-left: 8px;
+}
+
+.ing-item {
+  margin-bottom: 8px;
+  position: relative;
+  list-style: none;
+  font-size: 16px;
+  padding-left: 32px;
+}
+.ing-item::before {
+  content: "•"; /* символ-маркер */
+  position: absolute;
+  left: 0; /* розташування */
+  top: 50%;
+  transform: translateY(-50%); /* вирівнювання по вертикалі */
+  color: rgba(133, 70, 50, 1); /* колір маркера */
+}
+/* Інструкції */
+.instructions {
+  margin-bottom: 24px;
+}
+@media (min-width: 1440px) {
+  .instructions {
+    margin-bottom: 64px;
+  }
+}
+.inst-list {
+  margin-left: 8px;
+  list-style: none; /* прибираємо стандартні номери */
+  counter-reset: step; /* обнуляємо лічильник */
+  padding-left: 0; /* прибираємо відступ браузера */
+  margin: 0;
+}
+
+.inst-item {
+  counter-increment: step; /* збільшуємо лічильник */
+  display: flex;
+  flex-wrap: wrap; /* дозволяє тексту йти поруч */
+  align-items: flex-start; /* вирівнюємо по верхньому краю */
+  margin-bottom: 8px;
+}
+.inst-num {
+  min-width: 24px; /* фіксована ширина для номера */
+  font-weight: bold;
+  margin-right: 8px; /* відступ між номером і текстом */
+  text-align: right;
+}
+
+.inst-text {
+  flex: 1; /* текст займає решту простору */
+  padding-left: 8px;
+}
+.span-insr {
+  display: inline;
+  font-weight: bold;
+  margin-right: 4px;
+}
+/* Харчова цінність */
+.disc-nutrition {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  color: rgba(95, 86, 77, 1);
+}
+
+.nutr-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nutr-item {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 32px;
+  border-bottom: 1px solid #ddd;
+  width: 311px;
+  margin-bottom: 32px;
+}
+@media (min-width: 768px) {
+  .nutr-item {
+    width: 504px;
+  }
+}
+@media (min-width: 1440px) {
+  .nutr-item {
+    margin-bottom: 24px;
+  }
+}
+.nutr-span {
+  width: 228px;
+}
+.nutr-strong {
+  color: rgb(9, 8, 7);
+  flex: 1; /* друга колонка теж займає місце */
+  text-align: left; /* вирівнювання по лівому краю */
+  padding-left: 16px;
+  color: rgba(133, 70, 50, 1);
+}
+
+.nutr-item-text {
+  margin-left: 32px;
+  justify-content: flex-start;
+}
+.nutr-item-count {
+  font-weight: 600;
+}
